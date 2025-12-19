@@ -3,43 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torque Box | Performance Gear</title>
+    <title>Torque Box | RC Hobby Store</title>
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; background-color: #121212; color: white; text-align: center; }
-        header { padding: 60px 20px; background: #1f1f1f; border-bottom: 4px solid #ff4500; }
-        h1 { font-size: 3rem; margin: 0; color: #ff4500; text-transform: uppercase; letter-spacing: 3px; }
-        .tagline { color: #888; font-style: italic; margin-top: 10px; }
+        /* Base Styles */
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: #f8f8f8; color: #333; }
         
-        .product-container { display: flex; justify-content: center; gap: 20px; padding: 40px; flex-wrap: wrap; }
-        .product-card { background: #252525; border: 1px solid #333; padding: 20px; width: 250px; border-radius: 10px; }
-        .product-card h3 { color: #ff4500; }
-        .price { font-weight: bold; font-size: 1.2rem; }
-        button { background: #ff4500; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 15px; }
-        button:hover { background: #e03e00; }
+        /* Navigation Bar */
+        nav { background: white; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #d32f2f; text-transform: uppercase; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: #444; font-weight: 500; font-size: 0.9rem; }
+
+        /* Hero Section */
+        .hero { background: #1a1a1a; color: white; padding: 80px 20px; text-align: center; }
+        .hero h2 { font-size: 2.5rem; margin: 0; }
+        .hero p { color: #aaa; max-width: 600px; margin: 20px auto; line-height: 1.6; }
+        .btn-main { background: #d32f2f; color: white; padding: 12px 30px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px; }
+
+        /* Categories Section */
+        .section-title { text-align: center; padding: 40px 0 20px; font-size: 1.8rem; text-transform: uppercase; }
+        .categories { display: flex; justify-content: center; gap: 30px; padding: 20px; flex-wrap: wrap; }
+        .cat-item { text-align: center; width: 150px; }
+        .cat-circle { width: 120px; height: 120px; background: #ddd; border-radius: 50%; margin: 0 auto 10px; border: 2px solid #eee; transition: 0.3s; cursor: pointer; }
+        .cat-circle:hover { border-color: #d32f2f; transform: scale(1.05); }
+
+        /* Product Cards */
+        .products { display: flex; justify-content: center; gap: 20px; padding: 40px; flex-wrap: wrap; }
+        .product-card { background: white; width: 260px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: left; position: relative; }
+        .sale-tag { background: #ffeb3b; color: #000; font-size: 0.7rem; padding: 2px 8px; position: absolute; top: 10px; left: 10px; font-weight: bold; }
+        .product-image { width: 100%; height: 200px; background: #eee; border-radius: 4px; margin-bottom: 15px; }
+        .product-card h4 { margin: 10px 0 5px; font-size: 1rem; }
+        .price { color: #d32f2f; font-weight: bold; font-size: 1.1rem; }
+        .btn-add { width: 100%; padding: 10px; background: #333; color: white; border: none; border-radius: 4px; margin-top: 15px; cursor: pointer; }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: white; padding: 40px 50px; text-align: left; font-size: 0.9rem; margin-top: 50px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .footer-logo { color: #d32f2f; font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Torque Box</h1>
-        <p class="tagline">Precision Engineering & High-Performance Gear</p>
+    <nav>
+        <div class="logo">Torque Box</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">RC Cars</a>
+            <a href="#">Parts</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h2>MADE THE HARD WAY</h2>
+        <p>Elevate your RC experience with the premium Torque Box collection of hobby-grade cars and accessories.</p>
+        <a href="#" class="btn-main">SHOP NOW</a>
     </header>
 
-    <section class="product-container">
+    <h3 class="section-title">Top Categories</h3>
+    <section class="categories">
+        <div class="cat-item"><div class="cat-circle"></div><p>Off-Road</p></div>
+        <div class="cat-item"><div class="cat-circle"></div><p>On-Road</p></div>
+        <div class="cat-item"><div class="cat-circle"></div><p>Crawler</p></div>
+        <div class="cat-item"><div class="cat-circle"></div><p>Accessories</p></div>
+    </section>
+
+    <h3 class="section-title">Featured Products</h3>
+    <section class="products">
         <div class="product-card">
-            <h3>Carbon Intake</h3>
-            <p>Increase your airflow by 20%.</p>
-            <p class="price">$299.00</p>
-            <button>View Details</button>
+            <span class="sale-tag">SALE</span>
+            <div class="product-image"></div>
+            <h4>FMS 1:12 Hummer H1 Alpha RTR</h4>
+            <p class="price">₹35,000.00</p>
+            <button class="btn-add">Add to Cart</button>
         </div>
 
         <div class="product-card">
-            <h3>Torque Wrench</h3>
-            <p>Digital precision for every bolt.</p>
-            <p class="price">$85.00</p>
-            <button>View Details</button>
+            <span class="sale-tag">SALE</span>
+            <div class="product-image"></div>
+            <h4>MJX Hyper GO 16207 3S</h4>
+            <p class="price">₹14,500.00</p>
+            <button class="btn-add">Add to Cart</button>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Torque Box</div>
+                <p>Most trusted name among R/C enthusiasts since 2008.</p>
+            </div>
+            <div>
+                <h4>About The Store</h4>
+                <p>Shop no 02, Asmita Lord Plaza, Opp. Wockhardt Hospital, Mira Road East, Mumbai</p>
+                <p>Email: info@torquebox.com</p>
+            </div>
+        </div>
+        <hr style="border: 0.5px solid #333; margin-top: 30px;">
+        <p style="text-align: center; color: #888;">© Copyright 2024 Torque Box - All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
